@@ -1,0 +1,24 @@
+{
+    "product":[{
+        "id":10001,
+        "name":"Basic to Advance in react js",
+        "price":28,
+        "in_stock":true
+    },{
+        "id":10002,
+        "name":"Basic to Advance in python",
+        "price":29,
+        "in_stock":true
+    },{
+        "id":10003,
+        "name":"Basic to Advance in php",
+        "price":30,
+        "in_stock":false
+    },{
+        "id":10004,
+        "name":"Basic to Advance in nodejs",
+        "price":31,
+        "in_stock":false
+    }],
+    "featured_products":[{}]
+}

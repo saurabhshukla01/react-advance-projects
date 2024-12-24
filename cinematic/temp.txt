@@ -1,0 +1,12 @@
+//api key 
+
+3ec72f5085683452bb44ab4b3a855757
+//api read access
+
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZWM3MmY1MDg1NjgzNDUyYmI0NGFiNGIzYTg1NTc1NyIsIm5iZiI6MTczNDg0NjQ3Mi4wOTEsInN1YiI6IjY3NjdhODA4NTJhYjEyZGZlYTVlMzQwMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yB9dGRDg01_898gY7KzvXFX3xgDzzriz0yetk-To_n4
+
+https://api.themoviedb.org/3/movie/popular?language=en-US&page=1
+
+//now playing
+
+https://api.themoviedb.org/3/movie/now_playing
