@@ -1,0 +1,34 @@
+When i am getting error while install project follow this steps >>
+
+npm config set strict-ssl false
+ 
+npm config set registry http://registry.npmjs.org/
+ 
+npm cache clean --force
+ 
+retry >>>    npx create-react-app taskmate
+ 
+node -v  ( 14.0 or more than )
+npm -v   ( 6.0 or more than )
+ 
+ 
+solve this problem for coding , project not installed
+ 
+need to install one package when i run the project am getting this error related web vitals
+ 
+npm install web-vitals
+
+now my project install & goto project dir and serve command  >>>  npm run start
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+need to install server >>  npm i json-server
+
+after install need to run server  >>>    json-server --watch data/db.json
+
+after check its working fine.
+
+
+
+
+
