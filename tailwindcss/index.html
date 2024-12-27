@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beginner Tailwind CSS Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./index.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#" class="text-xl font-bold">My Website</a>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#" class="hover:underline">About</a></li>
+        <li><a href="#" class="hover:underline">Services</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-blue-500 text-white">
+    <div class="container mx-auto flex flex-col items-center text-center py-20">
+      <h1 class="text-4xl font-bold mb-4">Welcome to My Website</h1>
+      <p class="text-lg mb-6">This is a beginner-friendly page made with Tailwind CSS.</p>
+      <a href="#" class="bg-white text-blue-500 font-bold py-2 px-4 rounded hover:bg-blue-100">
+        Get Started
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-12">
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-lg">
+        We are a beginner-friendly web design company focusing on creating simple and effective websites.
+      </p>
+    </section>
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white shadow-md p-6 rounded">
+        <h3 class="text-xl font-bold mb-2">Feature 1</h3>
+        <p>A simple feature description for your project or website.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded">
+        <h3 class="text-xl font-bold mb-2">Feature 2</h3>
+        <p>Another simple feature description for your project or website.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded">
+        <h3 class="text-xl font-bold mb-2">Feature 3</h3>
+        <p>A third simple feature description for your project or website.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white">
+    <div class="container mx-auto text-center py-4">
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

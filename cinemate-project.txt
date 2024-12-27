@@ -1,0 +1,31 @@
+first create project via command >>
+# npx create-react-app cinemate
+
+after install router dom for the navlink via command ( latest 6.0 version )
+# npm install react-router-dom@6
+
+run server via command  >>
+# npm run start
+
+web-vitals install package via command  >>
+# npm install web-vitals
+
+###########################################
+
+after install tailwindcss via command  >>
+# npm install -D tailwindcss@3
+
+use lib for tailwindcss 
+# https://flowbite.com/
+
+update code and config tailwindcss apply in config js file ..
+
+clean force via command >>
+
+# npm cache clean --force
+
+after run start project again it works easy.
+
+
+
+
