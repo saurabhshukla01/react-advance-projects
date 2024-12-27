@@ -26,6 +26,953 @@ clean force via command >>
 
 after run start project again it works easy.
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+apis for movie response based ID >>
+
+url  >  Get method
+https://api.themoviedb.org/3//movie/939243
+
+
+response >>>
+
+{
+    "adult": false,
+    "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
+    "belongs_to_collection": {
+        "id": 720879,
+        "name": "Sonic the Hedgehog Collection",
+        "poster_path": "/fwFWhYXj8wY6gFACtecJbg229FI.jpg",
+        "backdrop_path": "/l5CIAdxVhhaUD3DaS4lP4AR2so9.jpg"
+    },
+    "budget": 122000000,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 10751,
+            "name": "Family"
+        }
+    ],
+    "homepage": "https://www.sonicthehedgehogmovie.com",
+    "id": 939243,
+    "imdb_id": "tt18259086",
+    "origin_country": [
+        "US"
+    ],
+    "original_language": "en",
+    "original_title": "Sonic the Hedgehog 3",
+    "overview": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched in every way, Team Sonic must seek out an unlikely alliance in hopes of stopping Shadow and protecting the planet.",
+    "popularity": 3663.337,
+    "poster_path": "/nyEr1VqvKx1YiesMC3oTB2fZvpY.jpg",
+    "production_companies": [
+        {
+            "id": 4,
+            "logo_path": "/gz66EfNoYPqHTYI4q9UEN4CbHRc.png",
+            "name": "Paramount Pictures",
+            "origin_country": "US"
+        },
+        {
+            "id": 333,
+            "logo_path": "/5xUJfzPZ8jWJUDzYtIeuPO4qPIa.png",
+            "name": "Original Film",
+            "origin_country": "US"
+        },
+        {
+            "id": 77884,
+            "logo_path": "/dP2lxVNctD5Cried0IWVqgrO2o9.png",
+            "name": "Marza Animation Planet",
+            "origin_country": "JP"
+        },
+        {
+            "id": 113750,
+            "logo_path": "/A3QVZ9Ah0yI2d2GiXUFpdlbTgyr.png",
+            "name": "SEGA",
+            "origin_country": "JP"
+        },
+        {
+            "id": 10644,
+            "logo_path": "/ocLZIdYJBppuCt1rhYEb2jbpt5F.png",
+            "name": "Blur Studio",
+            "origin_country": "US"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "JP",
+            "name": "Japan"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2024-12-19",
+    "revenue": 89379616,
+    "runtime": 110,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Español"
+        }
+    ],
+    "status": "Released",
+    "tagline": "New adventure. New rival.",
+    "title": "Sonic the Hedgehog 3",
+    "video": false,
+    "vote_average": 7.8,
+    "vote_count": 124
+}
+
+
++++++++++++++++++++++++++++++++++++++++++=
+
+Home page movie now playing 
+
+url :  https://api.themoviedb.org/3/movie/now_playing?query=
+payload  :   query:  ""
+
+response  >>>>
+
+{
+    "dates": {
+        "maximum": "2025-01-01",
+        "minimum": "2024-11-20"
+    },
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/cjEcqdRdPQJhYre3HUAc5538Gk8.jpg",
+            "genre_ids": [
+                28,
+                14,
+                35
+            ],
+            "id": 845781,
+            "original_language": "en",
+            "original_title": "Red One",
+            "overview": "After Santa Claus (codename: Red One) is kidnapped, the North Pole's Head of Security must team up with the world's most infamous tracker in a globe-trotting, action-packed mission to save Christmas.",
+            "popularity": 5982.016,
+            "poster_path": "/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
+            "release_date": "2024-10-31",
+            "title": "Red One",
+            "video": false,
+            "vote_average": 7.012,
+            "vote_count": 1422
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
+            "genre_ids": [
+                28,
+                878,
+                35,
+                10751
+            ],
+            "id": 939243,
+            "original_language": "en",
+            "original_title": "Sonic the Hedgehog 3",
+            "overview": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched in every way, Team Sonic must seek out an unlikely alliance in hopes of stopping Shadow and protecting the planet.",
+            "popularity": 3663.337,
+            "poster_path": "/nyEr1VqvKx1YiesMC3oTB2fZvpY.jpg",
+            "release_date": "2024-12-19",
+            "title": "Sonic the Hedgehog 3",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 124
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oHPoF0Gzu8xwK4CtdXDaWdcuZxZ.jpg",
+            "genre_ids": [
+                12,
+                10751,
+                18,
+                16
+            ],
+            "id": 762509,
+            "original_language": "en",
+            "original_title": "Mufasa: The Lion King",
+            "overview": "Told in flashbacks, Mufasa is an orphaned cub, lost and alone until he meets a sympathetic lion named Taka—the heir to a royal bloodline. The chance meeting sets in motion a journey of misfits searching for their destiny and working together to evade a threatening and deadly foe.",
+            "popularity": 3478.204,
+            "poster_path": "/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
+            "release_date": "2024-12-18",
+            "title": "Mufasa: The Lion King",
+            "video": false,
+            "vote_average": 7.059,
+            "vote_count": 227
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tElnmtQ6yz1PjN1kePNl8yMSb59.jpg",
+            "genre_ids": [
+                16,
+                12,
+                10751,
+                35
+            ],
+            "id": 1241982,
+            "original_language": "en",
+            "original_title": "Moana 2",
+            "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+            "popularity": 3176.216,
+            "poster_path": "/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
+            "release_date": "2024-11-21",
+            "title": "Moana 2",
+            "video": false,
+            "vote_average": 6.931,
+            "vote_count": 605
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rhc8Mtuo3Kh8CndnlmTNMF8o9pU.jpg",
+            "genre_ids": [
+                28,
+                53
+            ],
+            "id": 1005331,
+            "original_language": "en",
+            "original_title": "Carry-On",
+            "overview": "An airport security officer races to outsmart a mysterious traveler forcing him to let a dangerous item slip onto a Christmas Eve flight.",
+            "popularity": 2430.202,
+            "poster_path": "/sjMN7DRi4sGiledsmllEw5HJjPy.jpg",
+            "release_date": "2024-12-05",
+            "title": "Carry-On",
+            "video": false,
+            "vote_average": 7.0,
+            "vote_count": 1016
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/euYIwmwkmz95mnXvufEmbL6ovhZ.jpg",
+            "genre_ids": [
+                28,
+                12,
+                18
+            ],
+            "id": 558449,
+            "original_language": "en",
+            "original_title": "Gladiator II",
+            "overview": "Years after witnessing the death of the revered hero Maximus at the hands of his uncle, Lucius is forced to enter the Colosseum after his home is conquered by the tyrannical Emperors who now lead Rome with an iron fist. With rage in his heart and the future of the Empire at stake, Lucius must look to his past to find strength and honor to return the glory of Rome to its people.",
+            "popularity": 2996.003,
+            "poster_path": "/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
+            "release_date": "2024-11-05",
+            "title": "Gladiator II",
+            "video": false,
+            "vote_average": 6.7,
+            "vote_count": 1416
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cI3nL7CgGmPr0CizCwFHBpDkKyB.jpg",
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "id": 1156593,
+            "original_language": "es",
+            "original_title": "Culpa tuya",
+            "overview": "The love between Noah and Nick seems unwavering despite their parents' attempts to separate them. But his job and her entry into college open up their lives to new relationships that will shake the foundations of both their relationship and the Leister family itself.",
+            "popularity": 2019.632,
+            "poster_path": "/1sQA7lfcF9yUyoLYC0e6Zo3jmxE.jpg",
+            "release_date": "2024-12-26",
+            "title": "Culpa tuya",
+            "video": false,
+            "vote_average": 8.2,
+            "vote_count": 40
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/dWkdmxIkH9y23s9v1PjQFhTGIwo.jpg",
+            "genre_ids": [
+                28,
+                18,
+                53
+            ],
+            "id": 1043905,
+            "original_language": "en",
+            "original_title": "Dirty Angels",
+            "overview": "During the United States' 2021 withdrawal from Afghanistan, a group of female soldiers posing as medical relief are sent back in to rescue a group of kidnapped teenagers caught between ISIS and the Taliban.",
+            "popularity": 2073.9,
+            "poster_path": "/3O3qSGmjRGc10hMwFul8WDxKE5t.jpg",
+            "release_date": "2024-12-11",
+            "title": "Dirty Angels",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 38
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/au3o84ub27qTZiMiEc9UYzN74V3.jpg",
+            "genre_ids": [
+                28,
+                878,
+                53
+            ],
+            "id": 1035048,
+            "original_language": "en",
+            "original_title": "Elevation",
+            "overview": "A single father and two women venture from the safety of their homes to face monstrous creatures to save the life of a young boy.",
+            "popularity": 1680.289,
+            "poster_path": "/uQhYBxOVFU6s9agD49FnGHwJqG5.jpg",
+            "release_date": "2024-11-07",
+            "title": "Elevation",
+            "video": false,
+            "vote_average": 6.312,
+            "vote_count": 194
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6lE2e6j8qbtQR8aHxQNJlwxdmKV.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 974453,
+            "original_language": "en",
+            "original_title": "Absolution",
+            "overview": "An aging ex-boxer gangster working as muscle for a Boston crime boss receives an upsetting diagnosis.  Despite a faltering memory, he attempts to rectify the sins of his past and reconnect with his estranged children. He is determined to leave a positive legacy for his grandson, but the criminal underworld isn’t done with him and won’t loosen their grip willingly.",
+            "popularity": 1517.556,
+            "poster_path": "/2MeQG5Vq8rUnRAa463BZe5GNhVk.jpg",
+            "release_date": "2024-10-31",
+            "title": "Absolution",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 176
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/v9Du2HC3hlknAvGlWhquRbeifwW.jpg",
+            "genre_ids": [
+                28,
+                12,
+                53
+            ],
+            "id": 539972,
+            "original_language": "en",
+            "original_title": "Kraven the Hunter",
+            "overview": "Kraven Kravinoff's complex relationship with his ruthless gangster father, Nikolai, starts him down a path of vengeance with brutal consequences, motivating him to become not only the greatest hunter in the world, but also one of its most feared.",
+            "popularity": 974.578,
+            "poster_path": "/i47IUSsN126K11JUzqQIOi1Mg1M.jpg",
+            "release_date": "2024-12-11",
+            "title": "Kraven the Hunter",
+            "video": false,
+            "vote_average": 5.844,
+            "vote_count": 211
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mvDMt3JZ5zlsrXduGzj9jBEfVBT.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 1034541,
+            "original_language": "en",
+            "original_title": "Terrifier 3",
+            "overview": "Five years after surviving Art the Clown's Halloween massacre, Sienna and Jonathan are still struggling to rebuild their shattered lives. As the holiday season approaches, they try to embrace the Christmas spirit and leave the horrors of the past behind. But just when they think they're safe, Art returns, determined to turn their holiday cheer into a new nightmare. The festive season quickly unravels as Art unleashes his twisted brand of terror, proving that no holiday is safe.",
+            "popularity": 888.738,
+            "poster_path": "/ju10W5gl3PPK3b7TjEmVOZap51I.jpg",
+            "release_date": "2024-10-09",
+            "title": "Terrifier 3",
+            "video": false,
+            "vote_average": 6.9,
+            "vote_count": 1296
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4cp40IyTpFfsT2IKpl0YlUkMBIR.jpg",
+            "genre_ids": [
+                10749,
+                35,
+                18
+            ],
+            "id": 1064213,
+            "original_language": "en",
+            "original_title": "Anora",
+            "overview": "A young sex worker from Brooklyn gets her chance at a Cinderella story when she meets and impulsively marries the son of an oligarch. Once the news reaches Russia, her fairytale is threatened as his parents set out to get the marriage annulled.",
+            "popularity": 883.417,
+            "poster_path": "/7MrgIUeq0DD2iF7GR6wqJfYZNeC.jpg",
+            "release_date": "2024-10-14",
+            "title": "Anora",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 511
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rWs3Q9bT7zCH6t004z67UGuWUwu.jpg",
+            "genre_ids": [
+                16,
+                35,
+                10751,
+                14,
+                12
+            ],
+            "id": 645757,
+            "original_language": "en",
+            "original_title": "That Christmas",
+            "overview": "It's an unforgettable Christmas for the townsfolk of Wellington-on-Sea when the worst snowstorm in history alters everyone's plans — including Santa's.",
+            "popularity": 731.989,
+            "poster_path": "/bX6dx2U4hOk1esI7mYwtD3cEKdC.jpg",
+            "release_date": "2024-11-27",
+            "title": "That Christmas",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 244
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/t98L9uphqBSNn2Mkvdm3xSFCQyi.jpg",
+            "genre_ids": [
+                27,
+                878,
+                18
+            ],
+            "id": 933260,
+            "original_language": "en",
+            "original_title": "The Substance",
+            "overview": "A fading celebrity decides to use a black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.",
+            "popularity": 914.377,
+            "poster_path": "/lqoMzCcZYEFK729d6qzt349fB4o.jpg",
+            "release_date": "2024-09-07",
+            "title": "The Substance",
+            "video": false,
+            "vote_average": 7.204,
+            "vote_count": 2768
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/evFChfYeD2LqobEJf8iQsrYcGTw.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 1182387,
+            "original_language": "en",
+            "original_title": "Armor",
+            "overview": "Armored truck security guard James Brody is working with his son Casey transporting millions of dollars between banks when a team of thieves led by Rook orchestrate a takeover of their truck to seize the riches. Following a violent car chase, Rook soon has the armored truck surrounded and James and Casey find themselves cornered onto a decrepit bridge.",
+            "popularity": 768.49,
+            "poster_path": "/685wCHwr2kyQZxvThNIM04HuuCt.jpg",
+            "release_date": "2024-10-30",
+            "title": "Armor",
+            "video": false,
+            "vote_average": 5.6,
+            "vote_count": 92
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ag66gJCiZ06q1GSJuQlhGLi3Udx.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 1138194,
+            "original_language": "en",
+            "original_title": "Heretic",
+            "overview": "Two young missionaries are forced to prove their faith when they knock on the wrong door and are greeted by a diabolical Mr. Reed, becoming ensnared in his deadly game of cat-and-mouse.",
+            "popularity": 792.422,
+            "poster_path": "/5HJqjCTcaE1TFwnNh3Dn21be2es.jpg",
+            "release_date": "2024-10-31",
+            "title": "Heretic",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 555
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/h3fwlwHotd3JfV13HdW0mxDcxPD.jpg",
+            "genre_ids": [
+                35,
+                10749
+            ],
+            "id": 957119,
+            "original_language": "en",
+            "original_title": "Sidelined: The QB and Me",
+            "overview": "Dallas, a burdened but headstrong dancer, is determined to get into the best dance school in the country—her late mother’s alma mater. However, that dream is suddenly derailed when the cheeky yet secretly grieving football star, Drayton, crashes into her life with a unique story of his own. Will the two of them be able to grow into their dreams together, or will their dreams be sidelined?",
+            "popularity": 715.696,
+            "poster_path": "/hklQwv6QVoOp5bWyh1bjuF2ydyG.jpg",
+            "release_date": "2024-11-29",
+            "title": "Sidelined: The QB and Me",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 80
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uVlUu174iiKhsUGqnOSy46eIIMU.jpg",
+            "genre_ids": [
+                18,
+                10749,
+                14
+            ],
+            "id": 402431,
+            "original_language": "en",
+            "original_title": "Wicked",
+            "overview": "In the land of Oz, ostracized and misunderstood green-skinned Elphaba is forced to share a room with the popular aristocrat Glinda at Shiz University, and the two's unlikely friendship is tested as they begin to fulfill their respective destinies as Glinda the Good and the Wicked Witch of the West.",
+            "popularity": 659.361,
+            "poster_path": "/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg",
+            "release_date": "2024-11-20",
+            "title": "Wicked",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 659
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cHF6uYmmPARTSRr3vP3vziriuOI.jpg",
+            "genre_ids": [
+                16,
+                9648,
+                878,
+                28
+            ],
+            "id": 1299652,
+            "original_language": "en",
+            "original_title": "Watchmen: Chapter II",
+            "overview": "Suspicious of the events ensnaring their former colleagues, Nite Owl and Silk Spectre are spurred out of retirement to investigate. As they grapple with personal ethics, inner demons and a society turned against them, they race the clock to uncover a deepening plot that might trigger global nuclear war.",
+            "popularity": 724.182,
+            "poster_path": "/wUSXPLD3tLWdesY7nYwUitYRI50.jpg",
+            "release_date": "2024-11-25",
+            "title": "Watchmen: Chapter II",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 58
+        }
+    ],
+    "total_pages": 236,
+    "total_results": 4708
+}
+
++++++++++++++++++++++++++++++++++++++++++++
+
+Popular movies  >>>
+
+url >>  https://api.themoviedb.org/3/movie/popular?query=
+
+payload  >>>  query :  
+
++++++++++++++++++++++++++++++++++++++++++++
+
+Top rated movie :
+
+url :  https://api.themoviedb.org/3/movie/top_rated?query=
+payload :  query : ""
+
++++++++++++++++++++++++++++++++++++++++++++
+
+upcoming movie :
+
+url :  https://api.themoviedb.org/3/movie/upcoming?query=
+payload :  query : ""
+
++++++++++++++++++++++++++++++++++++++++++++
+
+search api for movies  >>>
+
+url :  https://api.themoviedb.org/3/search/movie?query=dirty
+
+payload :  query: dirty
+
+Response :  
+
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/aX3I4MfbhOY1IZd4VBM3AcolzLv.jpg",
+            "genre_ids": [
+                80,
+                18,
+                53
+            ],
+            "id": 10598,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "Two gangbangers turned cops try and cover up a scandal within the LAPD.",
+            "popularity": 9.903,
+            "poster_path": "/SmbCDYvQEJTWaGcwCUOxHAph39.jpg",
+            "release_date": "2006-01-20",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 5.2,
+            "vote_count": 106
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/dWkdmxIkH9y23s9v1PjQFhTGIwo.jpg",
+            "genre_ids": [
+                28,
+                18,
+                53
+            ],
+            "id": 1043905,
+            "original_language": "en",
+            "original_title": "Dirty Angels",
+            "overview": "During the United States' 2021 withdrawal from Afghanistan, a group of female soldiers posing as medical relief are sent back in to rescue a group of kidnapped teenagers caught between ISIS and the Taliban.",
+            "popularity": 2073.9,
+            "poster_path": "/3O3qSGmjRGc10hMwFul8WDxKE5t.jpg",
+            "release_date": "2024-12-11",
+            "title": "Dirty Angels",
+            "video": false,
+            "vote_average": 6.605,
+            "vote_count": 38
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/laacMWUpcjXpR23j3kFEIaW8Y7R.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 654959,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "Marco cuts class to spend the afternoon with his boyfriend, Graham. Things do not go as planned.",
+            "popularity": 1.429,
+            "poster_path": "/1VA7aXKcaAAotxXsD9hFvWxgywr.jpg",
+            "release_date": "2020-01-24",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 4.8,
+            "vote_count": 8
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 382031,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "Angie is a middle-aged drug dealer, who fulfills the masochistic fantasies of young student David. David shares a residence with lonely log company worker Tony. Angie’s roommate Nancy, Angie’s son Ethan and her old mother Abbie are also very lonely and desperate for human communication.",
+            "popularity": 0.673,
+            "poster_path": "/yJ2dD3CuHWCC10Qxtul1LnW0CpB.jpg",
+            "release_date": "1998-01-19",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 3.8,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 948348,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "",
+            "popularity": 0.96,
+            "poster_path": null,
+            "release_date": "",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 256993,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "DIRTY is the reincarnation of two girls, a bottle and one bed. Their bodies, hands and face expressions reach out in a refilm look.",
+            "popularity": 0.473,
+            "poster_path": "/eR3Fh6nBdplSWc5n4MKXZTQ1w4R.jpg",
+            "release_date": "1971-12-18",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 8
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 374489,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "Inspired by and loosely based on the introduction to Blue Of Noon by Georges Bataille, the title was taken from the name of the main character. It is a short portrayal of one person's descent into a state of degradation. In spite of her affluence, Dirty is rendered helpless in the hands of those she sought to patronise. The shifting points of view of this film allow the viewer to experience the protagonist as she is seen by herself, and how the world sees her.",
+            "popularity": 0.052,
+            "poster_path": null,
+            "release_date": "1993-01-16",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                53
+            ],
+            "id": 464175,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "Two dirty cops find themselves relieved of over two million dollars in stolen drugs and money, forcing them into a bizarre and mysterious investigation to recover it.",
+            "popularity": 0.593,
+            "poster_path": "/zmbKs6pRHWy2FjlCoDXCwSnpWdb.jpg",
+            "release_date": "2016-07-12",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 4.0,
+            "vote_count": 2
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jUxHcgDX9Yc7YdUPedVNu35wYon.jpg",
+            "genre_ids": [],
+            "id": 1197264,
+            "original_language": "en",
+            "original_title": "DIRTY",
+            "overview": "In Atlanta, family and the streets don't mix. Lies lead to hate, and jealousy can get you killed",
+            "popularity": 0.347,
+            "poster_path": "/fUwfXbG1TiQijZqZtkcfR3mOx3r.jpg",
+            "release_date": "2023-10-27",
+            "title": "DIRTY",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 1242925,
+            "original_language": "xx",
+            "original_title": "Dirty",
+            "overview": "A work of spiritual pornophany whose viewing provokes a retinal trance.",
+            "popularity": 0.059,
+            "poster_path": "/u0ETBGRM1Vjlpev37GZab4heTtO.jpg",
+            "release_date": "2012-10-01",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                28
+            ],
+            "id": 1306723,
+            "original_language": "en",
+            "original_title": "Dirty",
+            "overview": "With Internal Affairs coming down on him, a corrupt cop must take out the competition of the crime boss he moonlights for if he wants to survive long enough to get out of town first.",
+            "popularity": 0.42,
+            "poster_path": null,
+            "release_date": "",
+            "title": "Dirty",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ihucbBrACwSP7y6y14bogOLBCH.jpg",
+            "genre_ids": [
+                99,
+                80
+            ],
+            "id": 1294017,
+            "original_language": "pt",
+            "original_title": "Doleira: A História de Nelma Kodama",
+            "overview": "Out of prison, notorious black-market currency trader Nelma Kodama exposes her part in a major Brazilian corruption scandal.",
+            "popularity": 4.525,
+            "poster_path": "/uYuW6ZBFtETyGFyc4E0563T2V9y.jpg",
+            "release_date": "2024-06-06",
+            "title": "Nelma Kodama: The Queen of Dirty Money",
+            "video": false,
+            "vote_average": 7.0,
+            "vote_count": 11
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/WocCSXqOw4AjzfVswB9YPGQsyO.jpg",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 19413,
+            "original_language": "it",
+            "original_title": "Brutti, sporchi e cattivi",
+            "overview": "Giacinto lives with his wife, their ten children and various other family members in a shack on the hills of Rome. Some time ago he has lost his left eye while at work, and got a consistent sum of money from the insurance company, which he keeps hidden from the rest of the family. His whole life is now based on defending the money he sees as his own, while the rest of the family tries to kill him.",
+            "popularity": 12.656,
+            "poster_path": "/fnq2BD4VKESBTT0kNf8JTPk1Myo.jpg",
+            "release_date": "1976-09-23",
+            "title": "Ugly, Dirty and Bad",
+            "video": false,
+            "vote_average": 7.545,
+            "vote_count": 308
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hdQGXnd9BwzFuqWDI6PUayt6eHx.jpg",
+            "genre_ids": [
+                53,
+                10749
+            ],
+            "id": 777637,
+            "original_language": "te",
+            "original_title": "Dirty Hari",
+            "overview": "Hari is a man torn between his wife Vasudha and Jasmine. In his greed to lust after both, will he end up losing everything?",
+            "popularity": 1.066,
+            "poster_path": "/b2kXPr1plUHacLbFkel7hsjTPPn.jpg",
+            "release_date": "2020-12-18",
+            "title": "Dirty Hari",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6iDQCBUSZKzY8Rnu8ECwl2gXcfG.jpg",
+            "genre_ids": [
+                18,
+                10402,
+                10749
+            ],
+            "id": 88,
+            "original_language": "en",
+            "original_title": "Dirty Dancing",
+            "overview": "Expecting the usual tedium that accompanies a summer in the Catskills with her family, 17-year-old Frances 'Baby' Houseman is surprised to find herself stepping into the shoes of a professional hoofer—and unexpectedly falling in love.",
+            "popularity": 50.359,
+            "poster_path": "/9Jw6jys7q9gjzVX5zm1z0gC8gY9.jpg",
+            "release_date": "1987-08-21",
+            "title": "Dirty Dancing",
+            "video": false,
+            "vote_average": 7.332,
+            "vote_count": 6118
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nOphe2d4n5Jbt90Q1vmSpDbfvQ6.jpg",
+            "genre_ids": [
+                28,
+                35
+            ],
+            "id": 72222,
+            "original_language": "cn",
+            "original_title": "老虎田雞",
+            "overview": "Multi-Hand Chick asks Crazy Frog for protection after stealing someone's wallet at the casino. Foolishly he accepts, and even more foolishly he follows her home and removes his Invincible Armor when she pretends to be willing to sleep with him. Of course she steals it, and when he tries to follow her, he's stopped by Dirty Tiger who is on a mission to bring Crazy Frog back to his wife. However, Dirty Tiger would really like to have that armor himself...",
+            "popularity": 7.511,
+            "poster_path": "/ihFKkiICza5LxjSpwbvLafta0wQ.jpg",
+            "release_date": "1978-07-21",
+            "title": "Dirty Tiger, Crazy Frog",
+            "video": false,
+            "vote_average": 5.4,
+            "vote_count": 8
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fh7zymOxycXT7K09KIyGlUXBdUa.jpg",
+            "genre_ids": [
+                16,
+                878,
+                28,
+                35,
+                10749
+            ],
+            "id": 68368,
+            "original_language": "ja",
+            "original_title": "ダーティペア 劇場版",
+            "overview": "Agerna is a planet rich in Vizorium, the one mineral necessary to space travel. When a series of mysterious attacks on mining operations has world leaders pointing fingers and pinning blame, 3WA naturally send in their top agents to investigate. But are the Lovely Angels up to the task of stopping a mad scientist bent on taking a long dormant alien race to its final evolutionary form? Throw in a thief after a bottle of WWII-vintage wine and it's a safe bet that nobody's safe. It's more chaos, more mayhem, and even more destruction than ever before as the Dirty Pair take on their wildest case yet!",
+            "popularity": 9.681,
+            "poster_path": "/8l7zeovdhEfw28DlLOgbeWAaHTs.jpg",
+            "release_date": "1986-11-28",
+            "title": "Dirty Pair: Project Eden",
+            "video": false,
+            "vote_average": 7.0,
+            "vote_count": 34
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yUjc0QIKJe0kyzjQ7Ky6dKRasv1.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 291870,
+            "original_language": "en",
+            "original_title": "Dirty Grandpa",
+            "overview": "Jason Kelly is one week away from marrying his boss's uber-controlling daughter, putting him on the fast track for a partnership at the law firm. However, when the straight-laced Jason is tricked into driving his foul-mouthed grandfather, Dick, to Daytona for spring break, his pending nuptials are suddenly in jeopardy. Between riotous frat parties, bar fights, and an epic night of karaoke, Dick is on a quest to live his life to the fullest and bring Jason along for the ride.",
+            "popularity": 47.943,
+            "poster_path": "/mCfFWAqm7uPsVkKnJZetWrGKMGx.jpg",
+            "release_date": "2016-01-20",
+            "title": "Dirty Grandpa",
+            "video": false,
+            "vote_average": 5.9,
+            "vote_count": 4361
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nHeUqmbEjtth8XqaTgyw85WNXBQ.jpg",
+            "genre_ids": [
+                80,
+                18,
+                28
+            ],
+            "id": 23538,
+            "original_language": "ko",
+            "original_title": "비열한 거리",
+            "overview": "A small-time thug who collects debts for the local triad is torn between his criminal aspirations and his devotion to family.",
+            "popularity": 9.543,
+            "poster_path": "/ag6d5exA6s8VjxxHTXg756wnfGh.jpg",
+            "release_date": "2006-10-17",
+            "title": "A Dirty Carnival",
+            "video": false,
+            "vote_average": 7.021,
+            "vote_count": 195
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mri275ksTOgYzfkBc2J6eqE6qEO.jpg",
+            "genre_ids": [
+                16,
+                878
+            ],
+            "id": 68364,
+            "original_language": "ja",
+            "original_title": "ダーティペアの大勝負 ノーランディアの謎",
+            "overview": "The Lovely Angels are dispatched to the planet of Ookbar in search of a missing girl. Kei and Yuri have traced young Missinie to the forest of Nolandia, but their investigations have stalled thanks to the less than helpful Chief of Security. But Kei and Yuri never let a little bureaucracy stand in their way. It's the unicorns and UFOs, not to mention the rampaging killer robot, that are going to be the problem as the Dirty Pair tackle their toughest case yet.",
+            "popularity": 4.0,
+            "poster_path": "/l0V7kkv27rIQdLF8UyLm3DqqnMy.jpg",
+            "release_date": "1985-12-20",
+            "title": "Dirty Pair: Affair on Nolandia",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 6
+        }
+    ],
+    "total_pages": 34,
+    "total_results": 663
+}
+
+
 
 
 
