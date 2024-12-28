@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Header from './components/Header'
-import AddTask from './components/AddTask'
-import ShowTask from './components/ShowTask'
-import './App.css'
+import { AllRoutes } from "./routes/AllRoutes";
+import { Header } from "./components";
+import './App.css';
 
 function App() {
-    const [tasklist, setTasklist] = useState(JSON.parse(localStorage.getItem("tasklist")) || [])
-    const [newTask, setNewTask] = useState({})
-    useEffect(() => {
-        localStorage.setItem("tasklist", JSON.stringify(tasklist))
-    }, [tasklist])
-    return (
-        <div>
-            <Header />
-            <AddTask tasks={tasklist} setTask={setTasklist} newTask={newTask} setNewTask={setNewTask} />
-            <ShowTask tasks={tasklist} setTask={setTasklist} newTask={newTask} setNewTask={setNewTask} />
-        </div>
-    )
+  return (
+    <div className="App">
+      <Header />
+      <AllRoutes />
+    </div>
+  );
 }
 
-export default App
+export default App;
