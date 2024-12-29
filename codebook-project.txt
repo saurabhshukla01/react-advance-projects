@@ -26,11 +26,48 @@ need to install server >>  npm i json-server
 
 after install need to run server  >>>    json-server --watch data/db.json
 
+notes :  if data/db file json then run server command is ...
+
+# json-server --watch data/db.json --port 3000
+
 after check its working fine.
 
 now for ui start server :  npm run start
 
 for updated browser list >>>    # npx update-browserslist-db@latest
+
+clear cache for npm dependency >>
+
+# npm cache clean --force
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Create react project for codebook steps  >>>
+
+##################################################
+
+for install tailwindcss via cmd command >>>
+
+# npm install -D tailwindcss
+
+# npm tailwindcss init
+
+url is :   https://www.npmjs.com/package/jsonwebtoken
+
+for backend server setup for json server with dev dependency >>>
+
+# npm install -D json-server json-server-auth
+
+for route instalation via cmd >>
+
+# npm install react-router-dom@6
+
+import css cdn link in index.css file ..
+
+flowbite website use tailwindcss component for the same and create code use this.
+
+
+
 
 
 
