@@ -1,0 +1,19 @@
+Shopmate redux project  >>
+
+# first install app & design UI.
+# npm install
+now install redux & redux toolkit in our project via command ..
+
+# npm install react-redux@8
+# npm install @reduxjs/toolkit
+
+# this is url to check all react code in docs ..
+
+https://redux-toolkit.js.org/
+
+notion.so >>>    https://unwiredlearning.notion.site/React-Resources-4fdd421a603747b18f6c8824326c8a2b
+
+
+
+ 
+ 
