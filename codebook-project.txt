@@ -24,7 +24,7 @@ now my project install & goto project dir and serve command  >>>  npm run start
 
 need to install server >>  npm i json-server
 
-after install need to run server  >>>    json-server --watch data/db.json
+after install need to run server  >>>    json-server --watch data/db.json --port 8000
 
 notes :  if data/db file json then run server command is ...
 
@@ -101,10 +101,57 @@ another way is  :  create env file ...  # REACT_APP_HOST=http://localhost:4000
 
 run both server ..
 
+checking helps to take via github link >>
+
+https://github.com/jeremyben/json-server-auth
+
+need to run both server auth & json server command is >>
+
+# json-server data/db.json -m ./node_modules/json-server-auth --port 4000
 
 
+if its not working then follow some steps again ....
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1) Correct Way to Use json-server-auth
+Install json-server and json-server-auth Make sure both packages are installed:
+
+# npm install -g json-server
+# npm install json-server-auth
+
+2) Create a Custom Server File Instead of using the -m option, create a custom server file (server.js) that integrates json-server-auth with json-server.
+
+Example server.js:
+
+const jsonServer = require('json-server');
+const auth = require('json-server-auth');
+const path = require('path');
+
+const server = jsonServer.create();
+const router = jsonServer.router(path.join(__dirname, 'data', 'db.json'));
+const middlewares = jsonServer.defaults();
+
+// Bind the auth middleware
+server.db = router.db; // Required for json-server-auth to work
+server.use(middlewares);
+server.use(auth);
+server.use(router);
+
+const PORT = 4000;
+server.listen(PORT, () => {
+    console.log(`JSON Server with Auth is running on http://localhost:${PORT}`);
+});
 
 
+now run the server is 
+
+3) Run the Custom Server Use Node.js to start the custom server:
+
+# node server.js
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
