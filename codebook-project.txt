@@ -297,6 +297,20 @@ in login use useRef();
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+use router json file in our cart order or ecom project >>>
 
+via cmd command is use router.json file ...
+
+# json-server data/db.json -m ./node_modules/json-server-auth -r data/routers.json --port 8000
+
+this command is not working in our json file ..
+
+++++++++++++++++++++++++++++++++++++++
+
+set env values ...
+
+REACT_APP_HOST=http://localhost:4000
+REACT_APP_GUEST_LOGIN=saurabh_g@gmail.com
+REACT_APP_GUEST_PASSWORD=bestPassword
 
 
