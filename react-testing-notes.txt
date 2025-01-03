@@ -1,0 +1,231 @@
+React Testing >>
+1) Test component rendering
+2) Test Events - Fire Events & User Events
+3) Test API - Async Loading
+4) Test Page Component - Wrapper
+
+links :  https://testing-library.com/docs/react-testing-library/intro/
+
+read & test according to this ..
+
+React library & Jest for testing in react components ...
+
+test lib install for react command ..
+
+# npm install --save-dev @testing-library/react @testing-library/dom
+
+for testing purpose create some folder & file ext is  .test.js like wise.
+
+# create component inside __test__  inside create file like that >>  Counter.test.js file ..
+
+# create pages inside __test__  inside create file like that >>  PageNotFound.test.js file ..
+
+Set Up Jest and React Testing Library  >>
+
+# install jest before , you create test file jest search file & run after search file if test file in 
+empty then test is failed ..
+ 
+# test run command is >>   npm test 
+
+if you run test file then its working automatically when you stop manually ..
+
+Testing structure  >>>
+
+
+------------------------------------------------------------
+
+Query Result & Search Types in React Testing Library
+React Testing Library (RTL) provides various query functions to locate elements in the rendered DOM. Understanding the types of queries and their use cases is crucial for writing effective tests. Here's an overview:
+
+Query Types
+ByRole
+
+Targets elements based on their ARIA roles.
+Commonly used for accessibility-friendly tests.
+Example: Buttons, headings, etc.
+
+const button = screen.getByRole('button', { name: /submit/i });
+ByLabelText
+
+Targets elements associated with a <label> tag.
+Useful for form elements like inputs.
+
+const input = screen.getByLabelText(/username/i);
+ByPlaceholderText
+
+Targets elements with a placeholder attribute.
+
+const input = screen.getByPlaceholderText(/enter your name/i);
+ByText
+
+Targets elements based on their visible text content.
+
+const heading = screen.getByText(/welcome/i);
+ByDisplayValue
+
+Targets form elements displaying specific values.
+
+const input = screen.getByDisplayValue('John Doe');
+ByAltText
+
+Targets elements with alt attributes (e.g., <img> tags).
+
+const image = screen.getByAltText(/profile picture/i);
+ByTitle
+
+Targets elements with a title attribute.
+
+const element = screen.getByTitle('Close');
+ByTestId
+
+Targets elements with data-testid attributes.
+Useful for targeting elements without accessible labels.
+
+const element = screen.getByTestId('custom-element');
+Query Methods
+getBy
+
+Immediately throws an error if no matching element is found.
+Use for elements that should always be present.
+
+const button = screen.getByRole('button');
+queryBy
+
+Returns null if no element matches.
+Use to verify the absence of an element.
+
+const nonExistentElement = screen.queryByText(/not here/i);
+expect(nonExistentElement).toBeNull();
+findBy
+
+Returns a Promise, waiting for an element to appear.
+Useful for asynchronous rendering.
+
+const alert = await screen.findByText(/success/i);
+Query All Methods
+These methods return an array of matching elements instead of a single element:
+getAllBy
+queryAllBy
+findAllBy
+
+---------------------
+
+Example:
+
+const items = screen.getAllByRole('listitem');
+expect(items).toHaveLength(3);
+Tips for Choosing Queries
+Preferred Queries: Use ByRole whenever possible, as it aligns with accessibility standards.
+Fallback: Use ByTestId only when necessary (e.g., when other queries fail).
+Avoid Complex Selectors: RTL encourages testing based on how users interact with the UI, not implementation details.
+Practical Example
+Here’s a test demonstrating various queries:
+
+----------------------------------------
+
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders the application correctly', () => {
+  render(<App />);
+
+  // Query by role
+  const button = screen.getByRole('button', { name: /submit/i });
+  expect(button).toBeInTheDocument();
+
+  // Query by text
+  const heading = screen.getByText(/welcome to the app/i);
+  expect(heading).toBeInTheDocument();
+
+  // Query by placeholder text
+  const input = screen.getByPlaceholderText(/search/i);
+  expect(input).toBeInTheDocument();
+
+  // Query by test ID
+  const customElement = screen.getByTestId('custom-element');
+  expect(customElement).toBeInTheDocument();
+});
+
+
+Would you like this information added to your existing notes or formatted into a separate document?
+
+------------------------------------------------------
+
+jest links docs >>
+
+full docs url :  https://jestjs.io/docs/getting-started
+
+# https://jestjs.io/docs/expect
+
+
+create describe function inside all test in single place , its manange inside group 2-3 so we can manage ..
+
+Example :  
+
+Counter.test.js >>>
+
+import { render } from "@testing-library/react";
+import { Counter } from "../Counter";
+
+describe("Counter Component Test", () => {
+    // Tests using the test function
+    // Test 0: Check if the textarea is rendered and is truthy by its data-testid
+    test("render the textarea by data-testid", () => {
+        const { getByTestId } = render(<Counter />);
+        const textArea = getByTestId("textArea");
+        expect(textArea).toBeTruthy();
+    });
+
+    // Test 1: Check if the textarea is rendered and is truthy by its placeholder text
+    test("render the textarea by placeholder", () => {
+        const { getByPlaceholderText } = render(<Counter />);
+        const textArea = getByPlaceholderText("Type or paste your text");
+        expect(textArea).toBeTruthy();
+    });
+
+    // Test 2: Verify the initial character count result is "Character: 0"
+    test("render the character count result", () => {
+        const { getByTestId } = render(<Counter />);
+        const charLength = getByTestId("charLength");
+        expect(charLength.innerHTML).toBe("Character: 0");
+    });
+
+    // Test 3: Verify the word count result element is truthy
+    test("render the word count result", () => {
+        const { getByTestId } = render(<Counter />);
+        const wordLength = getByTestId("wordLength");
+        expect(wordLength).toBeTruthy();
+    });
+
+    // Optional: Tests using the `it` function
+
+    // it("render the textarea by placeholder", () => {
+    //     const { getByPlaceholderText } = render(<Counter />);
+    //     const textArea = getByPlaceholderText("Type or paste your text");
+    //     expect(textArea).toBeTruthy();
+    // });
+
+    // it("render the character count result", () => {
+    //     const { getByTestId } = render(<Counter />);
+    //     const charLength = getByTestId("charLength");
+    //     expect(charLength.innerHTML).toBe("Character: 0");
+    // });
+});
+
+---------------------------------------------------------------------------
+
+
+Entair describe is one Test Suits then inside you can write all test cases ...
+
+it and test both are same fucntion no worry its working fine.
+
+but more test function is more readful or meaning full then i use test function for write test case.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+

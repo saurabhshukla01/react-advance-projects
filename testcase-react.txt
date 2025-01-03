@@ -1,0 +1,254 @@
+React Testing Notes
+
+Overview
+
+React Testing is an essential part of a React application’s development lifecycle. It ensures that components behave as expected, providing confidence in code quality and catching bugs early. The most common tools used are Jest and React Testing Library.
+
+Key Libraries
+
+1. Jest
+
+A JavaScript testing framework designed for simplicity.
+
+Provides a rich API for assertions and mocking.
+
+2. React Testing Library
+
+A library for testing React components by simulating user interactions.
+
+Focuses on testing components as users experience them.
+
+Setting Up Testing
+
+Installing Dependencies
+
+If not using Create React App:
+
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event
+
+Jest Configuration
+
+Jest is pre-configured with Create React App. For custom setups, add the following in package.json:
+
+{
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
+  }
+}
+
+Create a setupTests.js file:
+
+import '@testing-library/jest-dom';
+
+Writing Tests
+
+Basic Structure
+
+Render Component: Use render() from React Testing Library.
+
+Query Elements: Use screen methods like getByText or getByRole.
+
+Simulate Interactions: Use fireEvent or userEvent.
+
+Assert Results: Use Jest matchers like toBeInTheDocument().
+
+Example
+
+Counter Component
+
+Component Code:
+
+// Counter.js
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+    </div>
+  );
+};
+
+export default Counter;
+
+Test Code:
+
+// Counter.test.js
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Counter from './Counter';
+
+describe('Counter Component', () => {
+  test('renders Counter component', () => {
+    render(<Counter />);
+    expect(screen.getByText('Counter: 0')).toBeInTheDocument();
+  });
+
+  test('increments counter', () => {
+    render(<Counter />);
+    fireEvent.click(screen.getByText('Increment'));
+    expect(screen.getByText('Counter: 1')).toBeInTheDocument();
+  });
+
+  test('decrements counter', () => {
+    render(<Counter />);
+    fireEvent.click(screen.getByText('Decrement'));
+    expect(screen.getByText('Counter: -1')).toBeInTheDocument();
+  });
+});
+
+React Testing Library Queries
+
+Common Query Methods
+
+Method
+
+Description
+
+getByText
+
+Finds elements by visible text content.
+
+getByRole
+
+Finds elements by ARIA roles.
+
+getByPlaceholderText
+
+Finds input elements by placeholder text.
+
+getByLabelText
+
+Finds form inputs by associated labels.
+
+queryByText
+
+Similar to getByText but returns null if not found.
+
+findByText
+
+Asynchronously finds an element by text.
+
+Examples
+
+render(<button>Click Me</button>);
+expect(screen.getByText('Click Me')).toBeInTheDocument();
+
+Simulating User Events
+
+Using fireEvent
+
+fireEvent.click(element);
+fireEvent.change(inputElement, { target: { value: 'test' } });
+
+Using userEvent (Preferred)
+
+import userEvent from '@testing-library/user-event';
+
+userEvent.click(element);
+userEvent.type(inputElement, 'test input');
+
+Testing Asynchronous Code
+
+Example: Fetching Data
+
+Component:
+
+// FetchData.js
+import React, { useEffect, useState } from 'react';
+
+const FetchData = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/data')
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
+  return <div>{data ? data.message : 'Loading...'}</div>;
+};
+
+export default FetchData;
+
+Test:
+
+// FetchData.test.js
+import React from 'react';
+import { render, screen, waitFor } from '@testing-library/react';
+import FetchData from './FetchData';
+
+beforeAll(() => {
+  global.fetch = jest.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve({ message: 'Hello, World!' }),
+    })
+  );
+});
+
+test('fetches and displays data', async () => {
+  render(<FetchData />);
+  expect(screen.getByText('Loading...')).toBeInTheDocument();
+  await waitFor(() => expect(screen.getByText('Hello, World!')).toBeInTheDocument());
+});
+
+Testing Form Inputs
+
+Form Component:
+
+const Form = ({ onSubmit }) => {
+  const [value, setValue] = useState('');
+
+  return (
+    <form onSubmit={(e) => {
+      e.preventDefault();
+      onSubmit(value);
+    }}>
+      <input value={value} onChange={(e) => setValue(e.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+Test:
+
+import { render, screen, fireEvent } from '@testing-library/react';
+import Form from './Form';
+
+test('submits form data', () => {
+  const mockSubmit = jest.fn();
+  render(<Form onSubmit={mockSubmit} />);
+
+  fireEvent.change(screen.getByRole('textbox'), { target: { value: 'test' } });
+  fireEvent.click(screen.getByText('Submit'));
+
+  expect(mockSubmit).toHaveBeenCalledWith('test');
+});
+
+Best Practices
+
+Write tests from the user’s perspective.
+
+Avoid testing implementation details (e.g., internal state).
+
+Mock external dependencies where necessary.
+
+Use descriptive test names.
+
+Keep tests focused on specific behaviors.
+
+Running Tests
+
+Use the following command to run tests:
+
+npm test
+
+This will run Jest in watch mode, allowing you to see changes in real-time.
+
+For further reading, consult the React Testing Library documentation and Jest documentation.
+
