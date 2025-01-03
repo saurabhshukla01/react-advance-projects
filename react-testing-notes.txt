@@ -223,6 +223,11 @@ but more test function is more readful or meaning full then i use test function 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+now install >>
+
+# npm install @testing-library/user-event
+
+after write some code .. and tested the result .
 
 
 

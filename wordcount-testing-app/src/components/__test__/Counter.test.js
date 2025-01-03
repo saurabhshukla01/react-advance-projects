@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import { render , screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 import { Counter } from "../Counter";
 
@@ -35,10 +36,50 @@ describe("Counter Component Test", () => {
     // Test 4: Verify the word count result element is truthy via document 
     test("render the word count result", () => {
         render(<Counter />);
-        const wordLength = getByText("Word: 0");
+        const wordLength = screen.getByText("Word: 0");
         expect(wordLength).toBeInTheDocument();   // for this need to import "@testing-library/jest-dom";
     });
 
+    // Test 5: Verify the event change & update result 
+    // test("change textarea and update result", () => {
+    //     render(<Counter />);
+    //     const textArea = screen.getByTestId("textArea");
+    //     const charLength = screen.getByTestId("charLength");
+    //     const wordLength = screen.getByTestId("wordLength"); 
+
+    //     userEvent.type(textArea,"saurabh");
+    //     expect(charLength.innerHTML).toBe("Character: 7");
+    //     expect(wordLength.innerHTML).toBe("Word: 1");
+    // });
+
+    // Test 5: Verify typing in the textarea updates the character and word counts
+    // test("change textarea and update result", async () => {
+    //     render(<Counter />);
+    //     const textArea = screen.getByTestId("textArea");
+    //     const charLength = screen.getByTestId("charLength");
+    //     const wordLength = screen.getByTestId("wordLength");
+
+    //     await userEvent.type(textArea, "saurabh");
+
+    //     expect(charLength).toHaveTextContent("Character: 7");
+    //     expect(wordLength).toHaveTextContent("Word: 1");
+    // });
+
+    // Test 5: Verify typing in the textarea updates the character and word counts
+    test("change textarea and update result", async () => {
+        render(<Counter />);
+        const textArea = screen.getByTestId("textArea");
+        const charLength = screen.getByTestId("charLength");
+        const wordLength = screen.getByTestId("wordLength");
+
+        // Use userEvent to type into the textarea
+        await userEvent.type(textArea, "saurabh");
+
+        // Assertions to check the updated counts
+        expect(charLength).toHaveTextContent("Character: 7");
+        expect(wordLength).toHaveTextContent("Word: 1");
+    });
+    
     // Optional: Tests using the `it` function
 
     // it("render the textarea by placeholder", () => {
